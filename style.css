@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFC0CB;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+   
+  .container {
+    padding: 40px 20px;
+  }
+   
+  h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+   
+  .options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+   
+  .option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    background-color: #DEB887;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    width: 200px;
+  }
+   
+  .option:hover {
+    transform: scale(1.05);
+  }
+   
+  .option img {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: contain;
+  margin-top: 10px;
+  }
+   
+  .option p {
+    padding: 10px;
+    font-size: 1.1em;
+  }
+ 
+   
+  .heart{
+    height: 70px;
+  }
+   
+  .andando {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    animation: andarSemTopo 30s linear infinite;
+  }
+   
+  @keyframes andarSemTopo {
+    0% {
+      top: calc(100% - 200px); /* Começa no canto inferior esquerdo */
+      left: 0;
+    }
+    25% {
+      top: calc(100% - 200px);
+      left: calc(100% - 200px); /* Vai para a direita */
+    }
+    50% {
+      top: 0;
+      left: calc(100% - 200px); /* Sobe pela direita */
+    }
+    75% {
+      top: calc(100% - 200px);
+      left: calc(100% - 200px); /* Desce de volta (ou pode pular direto) */
+    }
+    100% {
+      top: calc(100% - 200px);
+      left: 0; /* Volta para a esquerda */
+    }
+  }
+   
+ 
+  .opcoes-com-borda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+  }
+   
+  .borda-lateral {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+   
+  .borda-lateral img {
+    height: 100%;
+    max-height: 500px;
+    object-fit: contain;
+  }
+   
+.h1-film{
+    margin-top: 5%;
+    color: #ffffff;
+}
+ 
+.film{
+    height: 500px;
+    border-radius: 2%;
+    box-shadow: 0 10px 20px rgb(0, 0, 0);
+}  
+ 
+.text4{
+  color: #ffffff;
+  font-size: x-large
+}
+ 
+.f-body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #808080;
+  position: relative;
+}
+ 
+ 
+ .imagem-fullscreen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+ 
+.imagem-fullscreen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+ 
+.imagem-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('img/horror2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+ 
+.imagem-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('img/sua-imagem.jpg'); /* Substitua pelo seu caminho */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+ 
+/* Botão de voltar */
+.btn-voltar {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #000000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+.btn-voltar:hover {
+  background-color: #222;
+}
+ 
+/* Responsividade */
+@media (max-width: 768px) {
+  .h1-film {
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+ 
+  .film {
+    width: 90%;
+    height: auto;
+  }
+ 
+  .text {
+    font-size: 1em;
+    padding: 10px;
+  }
+ 
+  .btn-voltar {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+ 
+@media (max-width: 480px) {
+  .film {
+    width: 100%;
+    height: auto;
+  }
+ 
+  .h1-film {
+    font-size: 1.2em;
+  }
+}
+ 
+ @media (max-width: 1024px) {
+  .option {
+    width: 45%;
+  }
+
+  .borda-lateral {
+    display: none; /* Remove bordas em telas médias */
+  }
+
+  .andando {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .option {
+    width: 80%;
+  }
+
+  .option img {
+    height: auto;
+    max-height: 180px;
+  }
+
+  .container {
+    padding: 20px 10px;
+  }
+
+  .opcoes-com-borda {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .andando {
+    width: 120px;
+    height: 120px;
+  }
+
+  .film {
+    width: 90%;
+    height: auto;
+  }
+
+  .h1-film {
+    font-size: 1.4em;
+    margin-top: 10%;
+  }
+
+  .text4 {
+    font-size: 1em;
+  }
+
+  .btn-voltar {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .option {
+    width: 100%;
+  }
+
+  .option p {
+    font-size: 1em;
+  }
+
+  .film {
+    width: 100%;
+    height: auto;
+  }
+
+  .h1-film {
+    font-size: 1.2em;
+  }
+
+  .btn-voltar {
+    width: 80%;
+    font-size: 1em;
+  }
+
+  .andando {
+    width: 100px;
+    height: 100px;
+  }
+}
